@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Info ya</title>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        overflow: hidden;
+        background-color: black; /* Sayfa arka plan rengi */
+    }
+
+    .container {
+        position: relative;
+        text-align: center;
+    }
+
+    .box {
+        position: relative;
+        width: 300px;
+        height: 450px;
+        background-color: rgba(0, 0, 0, 0.7); /* Kutu arka plan rengi ve opaklık */
+        border-radius: 15px;
+        box-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 70px #00ff00; /* Neon efekti */
+        animation: glow 1.5s ease infinite alternate;
+    }
+
+    @keyframes glow {
+        from {
+            box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00; /* Neon efekti */
+        }
+        to {
+            box-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 70px #00ff00; /* Neon efekti */
+        }
+    }
+
+    .profile-pic {
+        position: absolute;
+        top: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: #00ff00;
+        box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;
+        animation: glow 1.5s ease infinite alternate;
+        z-index: 1;
+    }
+
+    h2 {
+        color: white;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    h4 {
+        color: white;
+        font-size: 12px;
+        font-weight: normal;
+        margin-top: 10px;
+    }
+
+    .line {
+        border-top: 1px solid white;
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .social-popup {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 5px;
+        padding: 5px 10px;
+        box-shadow: 0 0 10px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00;
+        z-index: 3;
+        width: 236px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .social-popup img {
+        width: 40px;
+        height: 40px;
+        margin-right: 5px;
+    }
+
+    .social-popup a {
+        display: inline-block;
+        color: #00ff00;
+        text-decoration: none;
+        font-size: 14px;
+        margin-bottom: 5px;
+        
+    }
+
+    .blurry-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-image: url('https://trenchtrenchtrench.com/assets/articles/heritage-a-young-digga-d-pioneers-the-early-uk-drill-sounds-with-hella-bandz-2016/Animated-GIF-downsized_large-4.gif');
+        background-size: cover;
+        filter: blur(10px); /* Bulanıklık efekti */
+    }
+</style>
+</head>
+<body>
+
+<div class="blurry-background"></div>
+
+<div class="container">
+    <div class="box">
+        <img src="https://i.pinimg.com/originals/eb/15/05/eb150586c2a4f95912c6e243b57ede71.gif" alt="Profil Fotoğrafı" class="profile-pic">
+        <br><br><br>
+        <h2>Sempiller</h2>
+        <h4>Python sucks</h4>
+        <div class="line"></div>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3hPbdPIXZPpyywSxnKNtYh?utm_source=generator&theme=0" width="250" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <div class="social-popup" style="top: 350px;">
+            <a href="https://www.youtube.com/channel/UC4ecfXW_D5nz_WNJWrf0jTw"><img src="https://i.imgur.com/LEZYT79.png" alt="Twitter"></a>
+            <a href="https://discord.gg/FxHPWD5PXV"><img src="https://i.pinimg.com/originals/5a/b9/f6/5ab9f6c8ef675bb5cafbb8cd954e6d14.jpg" alt="Facebook"></a>
+            <a href="https://www.instagram.com/centralsdoruk_/"><img src="https://i.imgur.com/B6RdpbC.png" alt="Instagram"></a>
+        </div>
+    </div>
+</div>
+
+<script>
+    setTimeout(function(){
+        document.getElementById('pythonSucks').style.display = 'none';
+    }, 3000);
+</script>
+
+</body>
+</html>
